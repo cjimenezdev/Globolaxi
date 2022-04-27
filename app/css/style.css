@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-body: rgb(240, 242, 245);
+    --bg-header: rgb(250, 253, 253);
+    --bg-nav: rgb(236, 238, 238);
+    --text-primary: rgb(102, 100, 211);
+    --text-secondary: rgb(49, 48, 99);
+    --bg-footer: rgb(206, 205, 236);
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    height: 100%;
+    background-color: var(--bg-body);
+}
+
+::-webkit-scrollbar {
+    background-color: var(--bg-nav);
+    width: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-header);
+}
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    background-color: var(--bg-header);
+    height: 90px;
+    box-shadow: 0px 5px 16px rgb(213, 219, 219);
+}
+
+.encabezado .logo {
+    display: flex;
+    margin: auto;
+}
+
+.encabezado .logo h1 {
+    display: none;
+}
+
+.encabezado .logo img {
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
+
+.encabezado .icon-menu {
+    background: transparent;
+    border: 0;
+    display: none;
+}
+
+.nav {
+    display: flex;
+    padding-top: 5.5rem;
+    width: 100%;
+    background-color: var(--bg-nav);
+    box-shadow: 0px 4px 16px rgb(250, 253, 253);
+    transition: 3s ease-out;
+}
+
+.nav .nav-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 1;
+    transition: 3s ease-out;
+}
+
+.nav .nav-menu li {
+    display: flex;
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.nav .nav-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav .nav-menu li a {
+    color: var(--text-primary);
+}
+
+.nav .nav-menu li:hover {
+    background-color: var(--bg-body);
+}
+
+.nav .nav-menu li a:hover {
+    color: var(--text-secondary);
+}
+
+.main {
+    height: 100%;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-footer);
+}
+
+.footer .footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 3rem;
+}
+
+.footer .footer-content .footer-menu {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+
+.footer .footer-content .footer-menu li {
+    list-style: none;
+}
+
+.footer .footer-content .footer-menu li a {
+    text-decoration: none;
+}
+
+.footer .footer-content .social-media {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.footer .footer-content .social-media .social-icon {
+    display: inline-flex;
+}
+
+.footer .footer-content .social-media .social-icon .icon-instagram {
+    font-size: 30px;
+    color: rgb(177, 92, 92);
+    margin-left: auto;
+}
+
+.footer .footer-content .social-media .social-icon .icon-facebook {
+    font-size: 30px;
+    color: rgb(76, 97, 216);
+}
+
+@media (max-width:991.98px) {
+    .encabezado .logo h1 {
+        display: flex;
+        padding-left: 1rem;
+        text-decoration: underline;
+    }
+    .encabezado .logo img {
+        display: none;
+    }
+    .encabezado .icon-menu {
+        width: 50%;
+        display: flex;
+        margin: auto;
+        padding-right: 1rem;
+        align-items: center;
+        justify-content: end;
+    }
+    .nav {
+        display: none;
+        opacity: 0;
+        transition: 3s ease-out;
+    }
+    .nav.flex {
+        opacity: 1;
+        transition: 3s ease-out;
+    }
+    .flex {
+        display: flex !important;
+    }
+    .footer .footer-content {
+        display: block;
+    }
+    .footer .footer-content .footer-menu {
+        padding: 2rem;
+    }
+    .footer .footer-content .social-media .social-icon {
+        display: block;
+    }
+}
